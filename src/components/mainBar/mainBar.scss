@@ -1,18 +1,21 @@
 .wrapper {
     margin-top: 20px;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    font-size: 14px;
     .inner{
         display: inline-block;
         margin: 0 auto;
     }
 }
 
-ul {
+.inner ul {
     list-style-type: none;
     display: block;
 }
-li {
+.inner li {
     display: inline-block;
     width: 90px;
     margin: 0 10px;
@@ -24,32 +27,20 @@ li {
    padding: 10px;
 }
 
-button {
+.btn_edit {
     outline: none;
     border: none;
     background-color: #fff;
     cursor: pointer;
-}
-button:hover {
-    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
-}
-
-.btn_edit {
     background-image: url(../../image/rename.png);
     background-repeat: no-repeat;
     width: 27px;
     height: 27px;
-    
+}
+.btn_edit:hover {
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
 }
 
-.btn_add {
-    display: block;
-    margin-top: 10px;
-    width: 100px;
-    height: 25px;
-    margin: 0 auto;
-    background-color: #f7f7f7;
-}
 
 
 

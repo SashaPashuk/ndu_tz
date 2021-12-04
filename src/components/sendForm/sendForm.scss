@@ -1,0 +1,16 @@
+.sendForm__wrapper {
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    span {
+        display: block;
+        margin-top: 7px;
+    }
+}
+
+.sendForm__list input {
+    display: block;
+    font-size: 20px;
+    max-width: 45vw;
+    margin-top: 7px;
+}

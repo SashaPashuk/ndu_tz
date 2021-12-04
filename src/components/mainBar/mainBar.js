@@ -1,12 +1,9 @@
 import React, {useState} from 'react';
 import axios from "axios"
 import "./mainBar.scss"
-import "../modal/Modal"
 
-
-const MainBar = () =>  {
-    const [posts, setPosts] = useState([])
-    const [modalActive, setModalActive] = useState(true)
+const MainBar = ({handleEditClick}) =>  {
+    const [posts, setPosts] = useState([]);
 
     React.useEffect(() => {
         const fetchData = async () => {            
@@ -21,14 +18,6 @@ const MainBar = () =>  {
         fetchData()
     }, [])
 
-    const handleEditClick = () => {
-        return(console.log("edit_button"))
-    }
-
-    const handleAddClick = () => {
-        return( console.log('add_button'))
-         
-    }
     
     return (
         <div className={'wrapper'}> 
@@ -45,19 +34,12 @@ const MainBar = () =>  {
                   <li>{post.temperatureC}</li>
                   <li>{post.temperatureF}</li>
                   <li>{post.summary}</li>
-                  <button  className={'btn_edit'} onClick={handleEditClick}></button>
+                  <button  className={'btn_edit'} onClick={() =>handleEditClick(post)}/>
               </ul>
           ))}
           </div>
-          <button className={'btn_add'} onClick={handleAddClick}>ADD</button>
         </div>
       );
   }
   
   export default MainBar;
-
-//   axios.post('/user', {
-//     firstName: 'Fred',
-//     lastName: 'Flintstone'
-//   })
-
